@@ -9,7 +9,7 @@ import (
 )
 
 var MongoCN = ConectarBD()
-var clientOptions = options.Client().ApplyURI("mongodb://localhost:27017/twittor")
+var clientOptions = options.Client().ApplyURI("mongodb+srv://root:root@cluster0.dztp9.mongodb.net/twittor?retryWrites=true&w=majority")
 
 func ConectarBD() *mongo.Client {
 
@@ -17,6 +17,7 @@ func ConectarBD() *mongo.Client {
 
 	if err != nil {
 		log.Fatal(err.Error())
+
 		return client
 	}
 	err = client.Ping(context.TODO(), nil)
