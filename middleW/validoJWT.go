@@ -3,8 +3,7 @@ package middlew
 import (
 	"net/http"
 
-		"github.com/pabloc33/twittor/routers"
-
+	"github.com/pabloc33/twittor/routers"
 )
 
 func ValidoJWT(next http.HandlerFunc) http.HandlerFunc {
